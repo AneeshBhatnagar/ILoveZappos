@@ -8,7 +8,6 @@
     <!-- navigation drawer item labels  -->
     <string-array name="nav_drawer_labels">
         <item>Home</item>
-        <item>About Me</item>
     </string-array>
 
     <string name="title_home">ILoveZappos</string>
