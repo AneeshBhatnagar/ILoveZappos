@@ -19,15 +19,12 @@ public class FragmentSearchResult extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_search_result, container, false);
-
-
         // Inflate the layout for this fragment
         return rootView;
     }
