@@ -3,28 +3,114 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".FragmentHome">
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    tools:context=".FragmentSearchResult">
+
+    <ImageView
+        android:id="@+id/result_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="30dp"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/result_product_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/result_image"
+        android:text="Mercurial Veloce III FG"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
 
     <TextView
-        android:id="@+id/label"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="100dp"
-        android:layout_width="fill_parent"
+        android:id="@+id/result_brand_name"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:textSize="45dp"
-        android:text="SEARCH RESULTS"
-        android:textStyle="bold"/>
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/result_product_name"
+        android:layout_marginTop="5dp"
+        android:text="Nike"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <TextView
-        android:layout_below="@id/label"
-        android:layout_centerInParent="true"
-        android:layout_width="fill_parent"
+        android:id="@+id/result_price"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="12dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/result_product_name"
+        android:layout_marginTop="5dp"
+        android:text="$30"
+        android:textColor="@color/green"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/result_product_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:layout_below="@id/result_brand_name"
+        android:layout_marginBottom="15dp"
         android:layout_marginTop="10dp"
-        android:gravity="center_horizontal"
-        android:text="Details for Searched Item go here" />
+        android:background="#888888" />
+
+    <TextView
+        android:id="@+id/result_product_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/result_product_divider"
+        android:text="Product ID: 123456"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/result_product_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/result_product_id"
+        android:text="Style ID: 123456"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/result_product_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/result_product_style"
+        android:text="Color ID: 123456"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/result_product_og_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/result_product_color"
+        android:text="Original Price: $30"
+        android:textSize="15sp" />
+
+
+    <TextView
+        android:id="@+id/result_product_url_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/result_product_og_price"
+        android:text="View Full Details on Website"
+        android:textStyle="bold"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/result_product_url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/result_product_url_info"
+        android:text="http://www.zappos.com"
+        android:clickable="true"
+        android:textSize="15sp" />
+
 
 </RelativeLayout>
