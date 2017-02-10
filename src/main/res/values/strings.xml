@@ -8,12 +8,12 @@
     <!-- navigation drawer item labels  -->
     <string-array name="nav_drawer_labels">
         <item>Home</item>
-        <item>About Me</item>
+        <item>About</item>
     </string-array>
 
     <string name="title_home">ILoveZappos</string>
-    <string name="title_about">About Me</string>
+    <string name="title_about">About</string>
     <string name="title_search_result">Search Results</string>
 
-    <string name="about_me">Some information about me, the developer of this application.</string>
+    <string name="about_me">The app developer for the app "ILoveZappos" is Aneesh Bhatnagar, a graduate student at the University at Buffalo, majoring in Computer Science and Engineering. You can find more about me on my personal website, http://www.aneeshbhatnagar.com.</string>
 </resources>
