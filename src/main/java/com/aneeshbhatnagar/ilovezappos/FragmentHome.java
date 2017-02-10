@@ -35,6 +35,7 @@ public class FragmentHome extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        ((MainActivity) getActivity()).setActionBarTitle(getString(R.string.title_home));
         editText = (EditText) rootView.findViewById(R.id.home_search_box);
         button = (Button) rootView.findViewById(R.id.home_search_button);
 
@@ -80,7 +81,7 @@ public class FragmentHome extends Fragment {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragment.setArguments(args);
         fragmentTransaction.replace(R.id.container_body,fragment);
-        fragmentTransaction.addToBackStack("tag");
+        fragmentTransaction.addToBackStack("home");
         fragmentTransaction.commit();
     }
 
