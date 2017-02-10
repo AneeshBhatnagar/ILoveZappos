@@ -1,9 +1,11 @@
 package com.aneeshbhatnagar.ilovezappos;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -14,6 +16,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -41,6 +44,7 @@ public class FragmentSearchResult extends Fragment {
     ProgressDialog progressDialog;
     SearchResultBinder binder;
     SearchResultModel searchResultModel;
+    private TextView textView;
     private FloatingActionButton floatingActionButton;
     private boolean fabClicked = false;
 
@@ -67,6 +71,15 @@ public class FragmentSearchResult extends Fragment {
         super.onActivityCreated(savedInstanceState);
         searchResultModel = SearchResultModel.instance();
         binder.setSearchResultViewModel(searchResultModel);
+        textView = (TextView) rootView.findViewById(R.id.result_product_url);
+        textView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(textView.getText().toString()));
+                startActivity(i);
+            }
+        });
         floatingActionButton = binder.fab;
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -132,7 +145,7 @@ public class FragmentSearchResult extends Fragment {
             Log.d("AsyncTask", finalResult.toString());
             try {
                 searchResultModel.setAllData(finalResult, bitmap);
-                if(progressDialog.isShowing())
+                if (progressDialog.isShowing())
                     progressDialog.dismiss();
             } catch (Exception e) {
                 e.printStackTrace();
