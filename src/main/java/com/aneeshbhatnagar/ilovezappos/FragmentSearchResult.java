@@ -61,6 +61,7 @@ public class FragmentSearchResult extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         initializeViews();
+        ((MainActivity) getActivity()).setActionBarTitle(getString(R.string.title_search_result));
         RequestQueue requestQueue = Volley.newRequestQueue(getContext());
         String url = "https://api.zappos.com/Search?key=b743e26728e16b81da139182bb2094357c31d331&term=" + queryText;
 
