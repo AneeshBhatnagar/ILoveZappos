@@ -9,6 +9,13 @@ An Android app built using the Zappos API to communicate a user query to the ser
 * A Floating Action Button to show an Add to cart button
 * Use of Android's Volley library, the fastest HTTP request library available for Android.
 
+####Tested On:
+* Android 7.0 Nougat (Google Nexus 6)
+* Android Kitkat 4.4.2 (Android Emulator)
+
+####Release APK:
+The release APK is available in the Github source. You can also download it by [clicking here](url=https://github.com/AneeshBhatnagar/ILoveZappos/blob/master/app-release.apk).
+
 ####Built By:
 * Aneesh Bhatnagar
 * http://www.aneeshbhatnagar.com
