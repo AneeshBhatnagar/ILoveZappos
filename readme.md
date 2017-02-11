@@ -14,7 +14,7 @@ An Android app built using the Zappos API to communicate a user query to the ser
 * Android Kitkat 4.4.2 (Android Emulator)
 
 ####Release APK:
-The release APK is available in the Github source. You can also download it by [clicking here](url=https://github.com/AneeshBhatnagar/ILoveZappos/blob/master/app-release.apk).
+The release APK is available in the Github source. You can also download it by [clicking here](https://github.com/AneeshBhatnagar/ILoveZappos/blob/master/app-release.apk).
 
 ####Built By:
 * Aneesh Bhatnagar
