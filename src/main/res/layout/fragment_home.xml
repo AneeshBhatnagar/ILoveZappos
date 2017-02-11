@@ -8,41 +8,40 @@
 
     <TextView
         android:id="@+id/home_label"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="35dp"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="35dp"
         android:gravity="center_horizontal"
-        android:textSize="40dp"
         android:text="Zappos Search"
-        android:textStyle="bold"/>
+        android:textSize="40dp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/home_search_box"
-        android:layout_marginTop="10dp"
-        android:maxLines="1"
-        android:layout_below="@id/home_label"
         android:layout_width="match_parent"
-        android:hint="Enter your search query here"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/home_label"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_height="wrap_content" />
+        android:layout_marginTop="10dp"
+        android:hint="Enter your search query here"
+        android:maxLines="1" />
 
     <Button
         android:id="@+id/home_search_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@id/home_search_box"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
-        android:text="Search"
         android:background="@color/colorAccent"
-        android:textStyle="normal"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
-        android:textColor="@color/white"
+        android:text="Search"
         android:textAllCaps="false"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
+        android:textColor="@color/white"
+        android:textStyle="normal" />
 
 
 </RelativeLayout>

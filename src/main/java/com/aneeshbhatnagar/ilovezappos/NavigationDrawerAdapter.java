@@ -2,7 +2,6 @@ package com.aneeshbhatnagar.ilovezappos;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,9 +12,6 @@ import com.aneeshbhatnagar.ilovezappos.model.NavDrawerItem;
 import java.util.Collections;
 import java.util.List;
 
-/**
- * Created by aneesh on 2/8/17.
- */
 
 public class NavigationDrawerAdapter extends RecyclerView.Adapter<NavigationDrawerAdapter.MyViewHolder> {
     List<NavDrawerItem> data = Collections.emptyList();

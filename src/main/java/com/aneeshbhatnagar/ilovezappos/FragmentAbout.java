@@ -35,9 +35,6 @@ public class FragmentAbout extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.fragment_about, container, false);
-
-
-        // Inflate the layout for this fragment
         return rootView;
     }
 
@@ -63,7 +60,7 @@ public class FragmentAbout extends Fragment {
                     Fragment fragment = new FragmentHome();
                     FragmentManager fragmentManager = getFragmentManager();
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                    fragmentTransaction.replace(R.id.container_body,fragment);
+                    fragmentTransaction.replace(R.id.container_body, fragment);
                     fragmentTransaction.commit();
                     return true;
                 }

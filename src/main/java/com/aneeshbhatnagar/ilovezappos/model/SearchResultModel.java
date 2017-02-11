@@ -12,10 +12,6 @@ import com.aneeshbhatnagar.ilovezappos.BR;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-/**
- * Created by aneesh on 2/10/17.
- */
-
 public class SearchResultModel extends BaseObservable {
     private static SearchResultModel instance;
     private String productName, brandName, price, ogPrice, styleId, productId, colorId, url;
@@ -28,8 +24,13 @@ public class SearchResultModel extends BaseObservable {
         return instance;
     }
 
+    @BindingAdapter("bind:imageBitmap")
+    public static void loadImage(ImageView iv, Bitmap bitmap) {
+        iv.setImageBitmap(bitmap);
+    }
+
     @Bindable
-    public Bitmap getBitmap(){
+    public Bitmap getBitmap() {
         return bitmap;
     }
 
@@ -38,52 +39,45 @@ public class SearchResultModel extends BaseObservable {
         return productName;
     }
 
-    @Bindable
-    public String getBrandName(){
-        return brandName;
-    }
-
-    @Bindable
-    public String getPrice(){
-        return price;
-    }
-
-    @Bindable
-    public String getOgPrice(){
-        return ogPrice;
-    }
-
-    @Bindable
-    public String getProductId(){
-        return productId;
-    }
-
-    @Bindable
-    public String getStyleId(){
-        return styleId;
-    }
-
-    @Bindable
-    public String getColorId(){
-        return colorId;
-    }
-
-    @Bindable
-    public String getUrl(){
-        return url;
-    }
-
-    @BindingAdapter("bind:imageBitmap")
-    public static void loadImage(ImageView iv, Bitmap bitmap) {
-        iv.setImageBitmap(bitmap);
-    }
-
     public void setProductName(String name) {
         productName = name;
         notifyPropertyChanged(BR.productName);
     }
 
+    @Bindable
+    public String getBrandName() {
+        return brandName;
+    }
 
+    @Bindable
+    public String getPrice() {
+        return price;
+    }
+
+    @Bindable
+    public String getOgPrice() {
+        return ogPrice;
+    }
+
+    @Bindable
+    public String getProductId() {
+        return productId;
+    }
+
+    @Bindable
+    public String getStyleId() {
+        return styleId;
+    }
+
+    @Bindable
+    public String getColorId() {
+        return colorId;
+    }
+
+    @Bindable
+    public String getUrl() {
+        return url;
+    }
 
     public void setAllData(JSONObject result, Bitmap bitmap) {
         this.bitmap = bitmap;

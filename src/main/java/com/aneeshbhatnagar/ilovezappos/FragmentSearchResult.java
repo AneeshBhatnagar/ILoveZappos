@@ -34,10 +34,6 @@ import org.json.JSONObject;
 
 import java.net.URL;
 
-/**
- * Created by aneesh on 2/9/17.
- */
-
 public class FragmentSearchResult extends Fragment {
     String queryText;
     View rootView;
@@ -49,7 +45,7 @@ public class FragmentSearchResult extends Fragment {
     private boolean fabClicked = false;
 
     public FragmentSearchResult() {
-        // Required empty public constructor
+
     }
 
     @Override

@@ -1,9 +1,5 @@
 package com.aneeshbhatnagar.ilovezappos.model;
 
-/**
- * Created by aneesh on 2/8/17.
- */
-
 public class NavDrawerItem {
     private boolean showNotify;
     private String title;

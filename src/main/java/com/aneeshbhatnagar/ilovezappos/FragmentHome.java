@@ -45,9 +45,9 @@ public class FragmentHome extends Fragment {
                 if ((event.getAction() == KeyEvent.ACTION_DOWN) &&
                         (keyCode == KeyEvent.KEYCODE_ENTER)) {
                     String text = editText.getText().toString();
-                    if(text==null || text.equals("") || text.equals(" ")){
-                        Toast.makeText(getContext(),"Please enter a search query!", Toast.LENGTH_LONG).show();
-                    }else{
+                    if (text == null || text.equals("") || text.equals(" ")) {
+                        Toast.makeText(getContext(), "Please enter a search query!", Toast.LENGTH_LONG).show();
+                    } else {
                         sendQuery(text);
                     }
                     return true;
@@ -59,28 +59,28 @@ public class FragmentHome extends Fragment {
             @Override
             public void onClick(View v) {
                 String text = editText.getText().toString();
-                if(text==null || text.equals("") || text.equals(" ")){
-                    Toast.makeText(getContext(),"Please enter a search query!", Toast.LENGTH_LONG).show();
-                }else{
+                if (text == null || text.equals("") || text.equals(" ")) {
+                    Toast.makeText(getContext(), "Please enter a search query!", Toast.LENGTH_LONG).show();
+                } else {
                     sendQuery(text);
                 }
             }
         });
     }
 
-    private void sendQuery(String query){
+    private void sendQuery(String query) {
         View view = getActivity().getCurrentFocus();
-        if(view!=null){
-            InputMethodManager imm = (InputMethodManager)getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+        if (view != null) {
+            InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
             imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
         }
         Bundle args = new Bundle();
-        args.putString("query",query);
+        args.putString("query", query);
         Fragment fragment = new FragmentSearchResult();
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragment.setArguments(args);
-        fragmentTransaction.replace(R.id.container_body,fragment);
+        fragmentTransaction.replace(R.id.container_body, fragment);
         fragmentTransaction.addToBackStack("home");
         fragmentTransaction.commit();
     }
