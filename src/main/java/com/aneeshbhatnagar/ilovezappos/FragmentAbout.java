@@ -65,6 +65,7 @@ public class FragmentAbout extends Fragment {
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                     fragmentTransaction.replace(R.id.container_body,fragment);
                     fragmentTransaction.commit();
+                    return true;
                 }
                 return false;
             }
