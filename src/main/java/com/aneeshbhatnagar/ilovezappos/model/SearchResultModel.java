@@ -4,6 +4,7 @@ import android.databinding.BaseObservable;
 import android.databinding.Bindable;
 import android.databinding.BindingAdapter;
 import android.graphics.Bitmap;
+import android.text.Html;
 import android.widget.ImageView;
 
 import com.aneeshbhatnagar.ilovezappos.BR;
@@ -87,7 +88,7 @@ public class SearchResultModel extends BaseObservable {
     public void setAllData(JSONObject result, Bitmap bitmap) {
         this.bitmap = bitmap;
         try {
-            productName = result.getString("productName").toString();
+            productName = Html.fromHtml(result.getString("productName").toString()).toString();
             brandName = result.getString("brandName").toString();
             price = result.getString("price").toString();
             ogPrice = "Original Price: " + result.getString("originalPrice").toString();
