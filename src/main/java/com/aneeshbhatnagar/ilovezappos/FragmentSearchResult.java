@@ -12,7 +12,6 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -105,7 +104,6 @@ public class FragmentSearchResult extends Fragment {
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                Log.d("Response", response);
                 try {
                     JSONObject jsonObject = new JSONObject(response);
                     JSONArray results = jsonObject.getJSONArray("results");
@@ -129,16 +127,8 @@ public class FragmentSearchResult extends Fragment {
         JSONObject finalResult;
 
         @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-            Log.d("AsyncTask", "Pre execute");
-        }
-
-        @Override
         protected void onPostExecute(Bitmap bitmap) {
             super.onPostExecute(bitmap);
-            Log.d("AsyncTask", "Post execute");
-            Log.d("AsyncTask", finalResult.toString());
             try {
                 searchResultModel.setAllData(finalResult, bitmap);
                 if (progressDialog.isShowing())
